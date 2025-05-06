@@ -61,6 +61,37 @@ void GPIO_deinit()
 }
 
 /*
+ * I2C
+ */
+
+/* I2C Attributes */
+static I2C_HwAttrs gI2cHwAttrs[CONFIG_I2C_HLD_NUM_INSTANCES] =
+{
+    {
+        .baseAddr       = CSL_I2C1_U_BASE,
+        .intNum         = 45,
+        .eventId        = 0,
+        .funcClk        = 96000000U,
+        .enableIntr     = 1,
+        .ownTargetAddr   = 0x1C,
+    },
+};
+
+/* I2C Objects - Initialized by the Driver */
+static I2C_Object gI2cObjects[CONFIG_I2C_HLD_NUM_INSTANCES];
+
+/* I2C driver configuration */
+I2C_Config gI2cConfig[CONFIG_I2C_HLD_NUM_INSTANCES] =
+{
+    {
+        .object = &gI2cObjects[CONFIG_I2C0],
+        .hwAttrs = &gI2cHwAttrs[CONFIG_I2C0]
+    },
+};
+
+uint32_t gI2cConfigNum = CONFIG_I2C_HLD_NUM_INSTANCES;
+
+/*
  * MCSPI
  */
 #include "ti_drivers_open_close.h"
@@ -232,6 +263,10 @@ void System_init(void)
         Pinmux_init();
     /* finally we initialize all peripheral drivers */
     GPIO_init();
+
+
+    I2C_init();
+
     MCSPI_init();
     EDMA_init();
     Drivers_uartInit();
@@ -240,6 +275,10 @@ void System_init(void)
 void System_deinit(void)
 {
     GPIO_deinit();
+
+
+    I2C_deinit();
+
     MCSPI_deinit();
     EDMA_deinit();
     UART_deinit();

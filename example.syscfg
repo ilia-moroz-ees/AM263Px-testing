@@ -11,6 +11,8 @@
  */
 const gpio            = scripting.addModule("/drivers/gpio/gpio", {}, false);
 const gpio1           = gpio.addInstance();
+const i2c             = scripting.addModule("/drivers/i2c/i2c", {}, false);
+const i2c1            = i2c.addInstance();
 const mcspi           = scripting.addModule("/drivers/mcspi/mcspi", {}, false);
 const mcspi1          = mcspi.addInstance();
 const debug_log       = scripting.addModule("/kernel/dpl/debug_log");
@@ -50,6 +52,10 @@ gpio1.pinDir         = "OUTPUT";
 gpio1.defaultValue   = "1";
 gpio1.$name          = "CS_GPIO";
 gpio1.GPIO_n.$assign = "SPI0_CS0";
+
+i2c1.$name           = "CONFIG_I2C0";
+i2c1.I2C.$assign     = "I2C1";
+i2c1.I2C_child.$name = "drivers_i2c_v1_i2c_v1_template0";
 
 mcspi1.$name                     = "CONFIG_MCSPI1";
 mcspi1.SPI.$assign               = "SPI0";
@@ -302,6 +308,8 @@ section12.output_section[0].alignment = 0;
  * version of the tool will not impact the pinmux you originally saw.  These lines can be completely deleted in order to
  * re-solve from scratch.
  */
+i2c1.I2C.SCL.$suggestSolution           = "I2C1_SCL";
+i2c1.I2C.SDA.$suggestSolution           = "I2C1_SDA";
 mcspi1.SPI.CLK.$suggestSolution         = "SPI0_CLK";
 mcspi1.SPI.D0.$suggestSolution          = "SPI0_D0";
 mcspi1.SPI.D1.$suggestSolution          = "SPI0_D1";

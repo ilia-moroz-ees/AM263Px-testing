@@ -83,9 +83,14 @@ syscfg/ti_board_open_close.o: syscfg/ti_board_open_close.c \
  C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/drivers/hw_include/cslr_gpio.h \
  C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/drivers/gpio/v0/cslr_gpio.h \
  C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/kernel/dpl/AddrTranslateP.h \
+ C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/drivers/i2c.h \
+ C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/drivers/i2c/v1/i2c.h \
+ C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/kernel/dpl/SemaphoreP.h \
+ C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/drivers/i2c/v1/lld/i2c_lld.h \
+ C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/drivers/i2c/v1/cslr_i2c.h \
+ C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/drivers/hw_include/cslr_i2c.h \
  C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/drivers/mcspi.h \
  C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/drivers/mcspi/v0/mcspi.h \
- C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/kernel/dpl/SemaphoreP.h \
  C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/drivers/mcspi/v0/lld/mcspi_lld.h \
  C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/drivers/hw_include/csl_types.h \
  C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/drivers/hw_include/cslr_mcspi.h \
@@ -188,9 +193,14 @@ C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/drivers/gpio/v0/gpio.h:
 C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/drivers/hw_include/cslr_gpio.h:
 C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/drivers/gpio/v0/cslr_gpio.h:
 C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/kernel/dpl/AddrTranslateP.h:
+C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/drivers/i2c.h:
+C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/drivers/i2c/v1/i2c.h:
+C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/kernel/dpl/SemaphoreP.h:
+C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/drivers/i2c/v1/lld/i2c_lld.h:
+C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/drivers/i2c/v1/cslr_i2c.h:
+C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/drivers/hw_include/cslr_i2c.h:
 C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/drivers/mcspi.h:
 C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/drivers/mcspi/v0/mcspi.h:
-C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/kernel/dpl/SemaphoreP.h:
 C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/drivers/mcspi/v0/lld/mcspi_lld.h:
 C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/drivers/hw_include/csl_types.h:
 C:/ti/mcu_plus_sdk_am263px_10_01_00_34/source/drivers/hw_include/cslr_mcspi.h:

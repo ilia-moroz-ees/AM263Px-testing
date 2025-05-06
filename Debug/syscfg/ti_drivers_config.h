@@ -66,6 +66,20 @@ void System_deinit(void);
 #define CS_GPIO_TRIG_TYPE (GPIO_TRIG_TYPE_NONE)
 #define CONFIG_GPIO_NUM_INSTANCES (1U)
 
+
+/*
+ * I2C
+ */
+
+/* I2C Instance Macros */
+#define CONFIG_I2C0 (0U)
+
+/* I2C Includes */
+#include <drivers/i2c.h>
+#include <kernel/dpl/ClockP.h>
+
+#define CONFIG_I2C_HLD_NUM_INSTANCES (1U)
+
 /*
  * MCSPI
  */

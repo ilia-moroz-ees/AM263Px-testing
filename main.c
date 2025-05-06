@@ -35,13 +35,15 @@
 #include "ti_board_config.h"
 
 void spi_test(void *args);
+void i2c_test(void *args);
 
 int main(void)
 {
     System_init();
     Board_init();
 
-    spi_test(NULL);
+    // spi_test(NULL);
+    i2c_test(NULL);
 
     Board_deinit();
     System_deinit();
